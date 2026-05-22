@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
 }
 
 body {
@@ -24,6 +25,7 @@ body {
     padding: 12px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .nav-left {
@@ -44,7 +46,7 @@ body {
     border: none;
     border-radius: 20px;
     padding: 8px 16px;
-    width: 600px;
+    width: 700px;
     color: #ffffff;
     font-size: 15px;
     position: relative;
@@ -63,6 +65,7 @@ body {
 .nav-right {
     display: flex;
     align-items: center;
+    gap: 10px;
 }
 
 .btn-create-community {
@@ -111,7 +114,7 @@ body {
 
 .app-container {
     max-width: 1400px;
-    margin: 0 auto;
+    margin: 0 1vw;
     padding: 24px 24px 24px 0;
     display: flex;
 }
@@ -132,7 +135,6 @@ body {
     transition: all 0.2s;
     color: #ffffff;
     border-radius: 20px;
-    text-decoration: none;
 }
 
 .menu-item:hover {
@@ -142,29 +144,8 @@ body {
 
 .menu-divider {
     height: 1px;
-    background-color: #00d4ff20;
-    margin: 16px 0;
-}
-
-.links-external {
-    display: flex;
-    flex-direction: column;
-}
-
-.external-link {
-    display: flex;
-    align-items: center;
-    padding: 10px 12px;
-    border-radius: 20px;
-    text-decoration: none;
-    color: #ffffff;
-    transition: all 0.2s;
-    cursor: pointer;
-}
-
-.external-link:hover {
     background-color: #0066ff;
-    color: #000000;
+    margin: 16px 0;
 }
 
 .main-feed {
