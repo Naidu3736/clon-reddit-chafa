@@ -231,6 +231,9 @@ if (tieneBuscador) {
                 if (esPaginaComunidad) {
                     cargarComunidad(comunidad.id);
                 }
+                 else {
+                    window.location.href = `comunidad.html?id=${comunidad.id}`; 
+                    }    
             });
 
             listaResultados.appendChild(li);
