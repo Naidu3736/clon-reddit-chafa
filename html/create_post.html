@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Post</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>
+<body>
+    <!-- Barra superior -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">LOGOTIPO</div>
+            <div class="search-bar">
+                <input type="text" placeholder="Buscar Comunidad">
+            </div>
+            <div class="buttons-container">
+                <a href="create_community.html" class="create-community-link">
+                    <button class="btn-create-community">Crear Comunidad</button>
+                </a>
+                <a href="iniciar_sesion.html">
+                    <button class="btn-login">Inicia Sesión</button>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenido principal -->
+    <div class="app-container">
+        <!-- Sidebar izquierdo -->
+        <aside class="sidebar-left">
+            <div class="menu-section">
+                <a href="../index.html" class="menu-item">
+                    <span>Publicaciones</span>
+                </a>
+                <a href="comunidades.html" class="menu-item">
+                    <span>Comunidades</span>
+                </a>
+            </div>
+
+            <div class="menu-divider"></div>
+
+            <div class=menu-section>
+                <a href="https://www.facebook.com/BUAPoficial" target="_blank" class="menu-item">
+                    <span>Facebook</span>
+                </a>
+                <a href="https://www.instagram.com/buapoficial" target="_blank" class="menu-item">
+                    <span>Instagram</span>
+                </a>
+                <a href="https://escolar.buap.mx/?q=content/servicios-educativos-y-de-formaci%C3%B3n" target="_blank" class="menu-item">
+                    <span>Servicios Escolares</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Formulario crear post -->
+        <main class="main-feed">
+            <div class="form-container">
+                <h2>Crear Nuevo Post en <span id="nombreComunidad">x/Comunidad</span></h2>
+                
+                <form id="postForm">
+                    <input type="hidden" id="comunidadId" value="1">
+                    
+                    <div class="form-group">
+                        <input type="text" id="titulo" placeholder="Título del post" required>
+                    </div>
+
+                    <div class="form-group">
+                        <textarea id="contenido" rows="6" placeholder="Escribe el contenido de tu post aquí..." required></textarea>
+                    </div>
+
+                    <div class="form-group">
+<div class="image-upload">
+    <label for="imagen" class="image-upload-btn">
+        <span>Agregar imagen</span>
+    </label>
+    <input type="file" id="imagen" name="imagen" accept="image/*">
+</div>
+                        <div id="vistaPrevia" class="vista-previa"></div>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Publicar Post</button>
+                </form>
+                <div id="mensaje" class="mensaje"></div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

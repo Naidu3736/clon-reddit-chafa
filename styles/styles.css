@@ -12,33 +12,35 @@ body {
     overflow-x: hidden;
 }
 
+/* ========== NAVBAR ========== */
 .navbar {
     background-color: #0a1024;
     border-bottom: 3px solid #0066ff;
     position: sticky;
     top: 0;
     z-index: 100;
+    width: 100%;
 }
 
 .nav-container {
-    max-width: 1400px;
-    padding: 12px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.nav-left {
+    width: 100%;
+    margin: 0 auto;
+    padding: 12px 20px;
     display: flex;
     align-items: center;
 }
 
 .logo {
     color: #ffffff;
-    font-size: 15px;
+    font-size: 20px;
     font-weight: bold;
-    position: relative;
-    left: 5%;
+    white-space: nowrap;
+}
+
+.search-bar {
+    flex: 1;
+    min-width: 200px;
+    margin-left: 10%;
 }
 
 .search-bar input {
@@ -46,52 +48,27 @@ body {
     border: none;
     border-radius: 20px;
     padding: 8px 16px;
-    width: 700px;
+    width: 70%;
     color: #ffffff;
     font-size: 15px;
-    position: relative;
-    left: 25%;
 }
 
 .search-bar input:focus {
-    outline: none;      
-    border: none;      
+    outline: none;
+    border: none;
 }
 
-.search-bar ::placeholder {
+.search-bar input::placeholder {
     color: #ffffff;
 }
 
-.nav-right {
+.buttons-container {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
 }
 
-.btn-create-community {
-    background-color: #0066ff;
-    color: #ffffff;
-    border: none;
-    padding: 8px 20px;
-    border-radius: 20px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.2s;
-    font-size: 15px;
-    position: relative;
-    left: 30%;
-}
-
-.btn-create-community:hover {
-    background-color: #00aaff;
-    color: #0a0e1a;
-    transform: scale(1.05);
-}
-
-.create-community-link {
-    text-decoration: none;
-}
-
+.btn-create-community,
 .btn-login {
     background-color: #0066ff;
     color: #ffffff;
@@ -102,25 +79,21 @@ body {
     cursor: pointer;
     transition: all 0.2s;
     font-size: 15px;
-    position: relative;
-    left: 35%;
+    white-space: nowrap;
 }
 
-.btn-login:hover {
-    background-color: #00aaff;
-    color: #000000;
-    transform: scale(1.05);
-}
 
+/* ========== APP CONTAINER ========== */
 .app-container {
-    max-width: 1400px;
-    margin: 0 1vw;
-    padding: 24px 24px 24px 0;
+    width: 100%;
+    padding: 15px;
     display: flex;
 }
 
+/* ========== SIDEBAR IZQUIERDO ========== */
 .sidebar-left {
     width: 200px;
+    flex-shrink: 0;
 }
 
 .menu-section {
@@ -135,6 +108,7 @@ body {
     transition: all 0.2s;
     color: #ffffff;
     border-radius: 20px;
+    text-decoration: none;
 }
 
 .menu-item:hover {
@@ -148,11 +122,285 @@ body {
     margin: 16px 0;
 }
 
+/* ========== MAIN FEED ========== */
 .main-feed {
     flex: 1;
     min-width: 0;
+    display: flex;
+    justify-content: center;
 }
 
 .feed-content {
+    width: 100%;
+    max-width: 800px;
     min-height: 400px;
+}
+
+.post-card {
+    background-color: #0a1024;
+    border: 1px solid #0066ff;
+    border-radius: 16px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    transition: all 0.2s;
+}
+
+.post-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 102, 255, 0.2);
+    border-color: #00d4ff;
+}
+
+/* ========== FORMULARIOS ========== */
+.form-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #0a1024;
+    border-radius: 16px;
+    padding: 32px;
+    border: 1px solid #0066ff;
+}
+
+.form-container h2 {
+    color: #ffffff;
+    font-size: 24px;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 16px;
+    background-color: #0a0e1a;
+    border: 1px solid #0066ff;
+    border-radius: 12px;
+    color: #ffffff;
+    font-size: 14px;
+    font-family: inherit;
+    transition: all 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #00d4ff;
+    box-shadow: 0 0 5px rgba(0, 100, 255, 0.3);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #888888;
+}
+
+/* Select personalizado */
+select {
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='white'><path d='M7 10l5 5 5-5z'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+}
+
+select option {
+    background-color: #0a1024;
+    color: #ffffff;
+}
+
+/* Textarea */
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Prefijo de comunidad (x/) */
+.community-prefix {
+    display: flex;
+    align-items: center;
+    background-color: #0a0e1a;
+    border: 1px solid #0066ff;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.community-prefix .prefix {
+    background-color: #0a1024;
+    padding: 12px 16px;
+    color: #0066ff;
+    font-weight: bold;
+    border-right: 1px solid #0066ff;
+    white-space: nowrap;
+}
+
+.community-prefix input {
+    border: none;
+    flex: 1;
+    background-color: #0a0e1a;
+    padding: 12px 16px;
+    color: #ffffff;
+}
+
+.community-prefix input:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.community-prefix input::placeholder {
+    color: #666666;
+}
+
+/* Botón de enviar */
+.btn-submit {
+    width: 100%;
+    background-color: #0066ff;
+    color: #ffffff;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-top: 10px;
+}
+
+.btn-submit:hover {
+    background-color: #00aaff;
+    color: #000000;
+    transform: scale(1.02);
+}
+
+/* Mensaje de éxito */
+.mensaje {
+    margin-top: 20px;
+    padding: 12px;
+    border-radius: 12px;
+    text-align: center;
+    display: none;
+}
+
+.mensaje.success {
+    display: block;
+    background-color: #0066ff20;
+    color: #00d4ff;
+    border: 1px solid #00d4ff;
+}
+
+/* ========== SUBIR IMAGEN ========== */
+.image-upload {
+    width: 100%;
+}
+
+.image-upload-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0a0e1a;
+    border: 1px dashed #0066ff;
+    border-radius: 12px;
+    padding: 16px;
+    cursor: pointer;
+    transition: all 0.2s;
+    color: #0066ff;
+    font-weight: bold;
+}
+
+.image-upload-btn:hover {
+    background-color: #0066ff20;
+    border-color: #00d4ff;
+    color: #00d4ff;
+}
+
+.image-upload-btn span:first-child {
+    font-size: 20px;
+}
+
+/* Vista previa de imagen */
+.vista-previa {
+    margin-top: 12px;
+}
+
+.imagen-preview {
+    position: relative;
+    display: inline-block;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #0066ff;
+}
+
+.imagen-preview img {
+    max-width: 100%;
+    max-height: 200px;
+    display: block;
+}
+
+.btn-remove-image {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.2s;
+}
+
+.btn-remove-image:hover {
+    background-color: #ff0000;
+    transform: scale(1.1);
+}
+#imagen {
+    display: none;
+}
+
+/* ========== PUBLICACIONES ========== */
+.publicacionenmuro {
+    background-color: #0a1024;
+    border: 1px solid #0066ff;
+    border-radius: 16px;
+    padding: 16px 20px;
+    transition: all 0.2s;
+}
+
+.publicacionenmuro:hover {
+    border-color: #00d4ff;
+    transform: translateY(-2px);
+}
+
+.encabezadopublicacion {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.avatarminiatura {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #0066ff;
+    background-size: cover;
+    background-position: center;
+}
+
+.titulopublicacion {
+    color: #ffffff;
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+.contenidopublicacion {
+    color: #e0e4f0;
+    line-height: 1.5;
 }

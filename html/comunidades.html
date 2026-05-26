@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comunidades</title>
+    <link rel="stylesheet" href="../css/styleexplorar.css">
+</head>
+
+<body>
+
+    <header class="barradenavegacion">
+        <div class="logo"><br></div>
+        <div class="busqueda" id="contenedorBusqueda">
+            <input type="text" id="inputBusqueda" placeholder="Buscar comunidades" autocomplete="off">
+            <span class="iconobusqueda"></span>
+            
+            
+            <div class="menudesplegable" id="menuDesplegableBusqueda">
+                <ul class="listaresultados" id="listaResultados">
+                </ul>
+            </div>
+        </div>
+
+        <div class="menu">
+            <span class="iconomenu"></span>
+            <span class="iconocomentarios"></span>
+            <span class="icononotificaciones"></span>
+            <div class="avatarperfil avatarmenu"></div>
+        </div>  
+    </header>
+
+    <div class="contenedorcomunidades"> 
+        <h1 class="titulopagina">Comunidades</h1>
+
+        <main class="disenoexplorarcomunidades">
+
+            <aside class="ladoizquierdo">
+
+                <div class="comunidadesizquierda">
+                    <div class="divisioninterna">
+                        <h3 class="titulocomunidades">Comunidades que te pueden interesar</h3>
+                        <hr class="separacionesdecomunidades">
+                        <div class="intereses">
+                            <span>x/TeayudoconTareas</span><br><br>
+                            <span>x/Proyectos</span><br><br>
+                            <span>x/Material de Estudio</span>
+                        </div>
+                        <div class="espaciovacio"></div>
+                    </div>
+                </div>
+
+                <div class="ladoizquierdo2">
+                    <div class="divisioninterna">
+                        <h3 class="titulocomunidades">Temas de interés</h3>
+                        <hr class="separacionesdecomunidades">
+                        <div class="intereses">
+                            <span>Tendencias</span><br><br>
+                            <span>Tecnología</span><br><br>
+                            <span>Arte</span><br><br>
+                            <span>Ciencia</span><br><br>
+                            <span>Deportes</span><br><br>
+                            <span>Música</span><br><br>
+                            <span>Talleres</span>
+                        </div>
+                        <div class="espaciovacio"></div>
+                    </div>
+                </div>
+
+            </aside>
+
+        <section class="ladoderecho">
+            <div class="categorias">
+                <button class="botoncategoria">Tendencias</button>
+                <button class="botoncategoria">Tecnología</button>
+                <button class="botoncategoria">Arte</button>
+                <button class="botoncategoria">Ciencia</button>
+                <button class="botoncategoria">Deportes</button>
+                <button class="botoncategoria">Música</button>
+                <button class="botoncategoria">Talleres</button>
+            </div>
+
+            <div class="listadecomunidades">
+                <div class="comunidad1"><h2>x/Hacking</h2></div><br>
+                <div class="comunidad2"><h2>x/Arte Digital</h2></div><br>
+                <div class="comunidad3"><h2>x/Algoritmos</h2></div><br>
+                <div class="comunidad4"><h2>x/Minería de Datos</h2></div><br>
+            </div>
+            <br>
+            <button class="vermas">Ver más comunidades</button>
+        </section>
+
+    
+        </main>
+            
+
+    </div>
+
+    <script src="../js/comunidad.js" defer></script>
+</body>
+</html>
