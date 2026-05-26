@@ -10,14 +10,13 @@
     <!-- Barra superior -->
     <nav class="navbar">
         <div class="nav-container">
-            <div class="logo">LOGOTIPO</div>
+            <div class="logo">
+                <a href="../index.html"></a>
+            </div>
             <div class="search-bar">
                 <input type="text" placeholder="Buscar Comunidad">
             </div>
             <div class="buttons-container">
-                <a href="html/create_community.html" class="create-community-link">
-                    <button class="btn-create-community">Crear Comunidad</button>
-                </a>
                 <a href="iniciar_sesion.html">
                     <button class="btn-login">Inicia Sesión</button>
                 </a>
@@ -40,7 +39,7 @@
 
             <div class="menu-divider"></div>
 
-            <div class=menu-section>
+            <div class="menu-section">
                 <a href="https://www.facebook.com/BUAPoficial" target="_blank" class="menu-item">
                     <span>Facebook</span>
                 </a>
@@ -80,11 +79,37 @@
                         </select>
                     </div>
 
+                    <!-- Banner de la comunidad -->
+                    <div class="form-group">
+                        <label>Banner de la comunidad</label>
+                        <div class="image-upload">
+                            <label for="banner" class="image-upload-btn">
+                                Subir banner
+                            </label>
+                            <input type="file" id="banner" accept="image/*">
+                        </div>
+                        <div id="vistaPreviaBanner" class="vista-previa"></div>
+                    </div>
+
+                    <!-- Logo de la comunidad -->
+                    <div class="form-group">
+                        <label>Logo de la comunidad</label>
+                        <div class="image-upload">
+                            <label for="logo" class="image-upload-btn">
+                                Subir logo
+                            </label>
+                            <input type="file" id="logo" accept="image/*">
+                        </div>
+                        <div id="vistaPreviaLogo" class="vista-previa"></div>
+                    </div>
+
                     <button type="submit" class="btn-submit">Crear Comunidad</button>
                 </form>
                 <div id="mensaje" class="mensaje"></div>
             </div>
         </main>
     </div>
+
+    <script src="../js/preview_image.js"></script>
 </body>
 </html>

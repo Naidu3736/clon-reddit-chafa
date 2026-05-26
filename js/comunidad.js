@@ -1,4 +1,4 @@
-const baseDatos = {
+var baseDatos = {
     configuracion_global: {
         usuario_actual: {
             nombre: 'Astra',
@@ -233,7 +233,7 @@ if (tieneBuscador) {
                 }
                  else {
                     window.location.href = `comunidad.html?id=${comunidad.id}`; 
-                    }    
+                }    
             });
 
             listaResultados.appendChild(li);

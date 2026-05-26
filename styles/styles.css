@@ -31,10 +31,21 @@ body {
 }
 
 .logo {
-    color: #ffffff;
-    font-size: 20px;
+    text-align: center;
     font-weight: bold;
-    white-space: nowrap;
+    width: 120px;
+    height: 50px;
+
+    background-image: url("../images/logo.gif");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.logo a {
+    display: block;
+    width: 100%;
+    height: 100%;
 }
 
 .search-bar {
@@ -151,6 +162,41 @@ body {
     border-color: #00d4ff;
 }
 
+.publicacionenmuro {
+    background-color: #0a1024;
+    border: 1px solid #0066ff;
+    border-radius: 16px;
+    padding: 16px 20px;
+    transition: all 0.2s;
+}
+
+.encabezadopublicacion {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.avatarminiatura {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #0066ff;
+    background-size: cover;
+    background-position: center;
+}
+
+.titulopublicacion {
+    color: #ffffff;
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+.contenidopublicacion {
+    color: #e0e4f0;
+    line-height: 1.5;
+}
+
 /* ========== FORMULARIOS ========== */
 .form-container {
     width: 100%;
@@ -200,27 +246,17 @@ body {
     color: #888888;
 }
 
-/* Select personalizado */
-select {
-    cursor: pointer;
-    appearance: none;
-    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='white'><path d='M7 10l5 5 5-5z'/></svg>");
-    background-repeat: no-repeat;
-    background-position: right 16px center;
-}
-
 select option {
     background-color: #0a1024;
     color: #ffffff;
 }
 
-/* Textarea */
+
 textarea {
     resize: vertical;
     min-height: 120px;
 }
 
-/* Prefijo de comunidad (x/) */
 .community-prefix {
     display: flex;
     align-items: center;
@@ -256,7 +292,8 @@ textarea {
     color: #666666;
 }
 
-/* Botón de enviar */
+
+
 .btn-submit {
     width: 100%;
     background-color: #0066ff;
@@ -277,21 +314,6 @@ textarea {
     transform: scale(1.02);
 }
 
-/* Mensaje de éxito */
-.mensaje {
-    margin-top: 20px;
-    padding: 12px;
-    border-radius: 12px;
-    text-align: center;
-    display: none;
-}
-
-.mensaje.success {
-    display: block;
-    background-color: #0066ff20;
-    color: #00d4ff;
-    border: 1px solid #00d4ff;
-}
 
 /* ========== SUBIR IMAGEN ========== */
 .image-upload {
@@ -360,47 +382,9 @@ textarea {
     background-color: #ff0000;
     transform: scale(1.1);
 }
+
+#logo,
+#banner,
 #imagen {
     display: none;
-}
-
-/* ========== PUBLICACIONES ========== */
-.publicacionenmuro {
-    background-color: #0a1024;
-    border: 1px solid #0066ff;
-    border-radius: 16px;
-    padding: 16px 20px;
-    transition: all 0.2s;
-}
-
-.publicacionenmuro:hover {
-    border-color: #00d4ff;
-    transform: translateY(-2px);
-}
-
-.encabezadopublicacion {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 12px;
-}
-
-.avatarminiatura {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: #0066ff;
-    background-size: cover;
-    background-position: center;
-}
-
-.titulopublicacion {
-    color: #ffffff;
-    font-size: 18px;
-    margin-bottom: 12px;
-}
-
-.contenidopublicacion {
-    color: #e0e4f0;
-    line-height: 1.5;
 }

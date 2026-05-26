@@ -100,6 +100,12 @@ body {
     background-position: center;
 }
 
+.logo a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
 .iconobusqueda {
     display: inline-block;
     width: 26px;
