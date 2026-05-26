@@ -1,0 +1,115 @@
+
+   /* body{
+    background:linear-gradient(
+        135deg,
+        #050816,
+        #3751b8
+    );
+} */
+/* ------------------- Bienvenida ------------------------ */
+.container-Welcome{
+    background:
+    linear-gradient(
+        180deg,
+        #f5f7ff,
+        #dbeafe
+    );
+
+}
+
+/* Titulo */
+.container-Welcome h1{
+ color:#111936;
+   
+}
+
+/* Parrafo */
+.container-Welcome p{
+color:#111936;
+
+}
+
+/* -------------------- Registro ----------------------- */
+
+.container-authen{
+    
+    background:
+    linear-gradient(
+        135deg,
+        #505e73,
+        #3b82f6 
+    );
+}
+
+
+/* Titulo */
+
+.container-authen h2{
+    color:white;
+
+}
+
+.container-authen h2:hover{
+ color:#171717;
+}
+
+/* Usa tu coreeo... */
+.container-authen span{
+    color:#7ca2d4;
+}
+
+/* Ya tienes una cuenta? */
+
+.container-authen .link{
+    color:#cced8a;
+    margin-bottom: 70px;
+}
+
+.container-authen .link:hover{
+    color:white;
+}
+
+/* ---------------------------- Inputs ---------------------------- */
+/* Nombre-Usuario-Password */
+.container-input p{
+    color:#f2e382;
+
+}
+
+.container-input input{
+    background:white;
+    color:#111;
+}
+
+
+.container-input input:focus{
+
+    box-shadow:
+    0px 0px 15px rgba(255, 255, 255, 0.998);
+}
+
+/* ----------------------------- Boton --------------------------- */
+
+.container-authen button{
+    background:#443b7e;
+    color:white;
+
+}
+
+.container-authen button:hover{
+
+    background:#111936;
+    box-shadow:
+    0px 0px 20px rgba(10,16,36,0.5);
+}
+
+/* Redes sociales */
+.social-networks a{
+    background:rgba(255, 255, 255, 0.15);
+    
+}
+
+.social-networks a:hover{
+
+    background:white;
+}

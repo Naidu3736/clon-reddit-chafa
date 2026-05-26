@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="style_G.css" />
+
+    <link rel="stylesheet" href="style_Login.css" />
+
+    <title>Login</title>
+
+    <script>
+      function login() {
+        /* Primero obtenemos los datos que el usuario ingresa */
+        var usuario = document.getElementById("username").value;
+
+        var password = document.getElementById("password").value;
+
+        /* Luego obtenemos los usuarios guardados en localStorage */
+        var usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+
+        var encontrado = false;
+
+        /* Recorremos todos los usuarios almacenados */
+        for (var i = 0; i < usuarios.length; i++) {
+          if (
+            /* Verificamos si coinciden usuario y contraseña */
+            usuarios[i].usuario == usuario &&
+            usuarios[i].password == password
+          ) {
+            encontrado = true;
+
+            alert("Bienvenido " + usuarios[i].nombre);
+
+            /*En el caso de que si  exista el usuario, lo mandamos a la pagina de inicio*/
+            window.location = "index.html";
+          }
+        }
+
+        if (encontrado == false) {
+          alert("Usuario incorrecto");
+        }
+      }
+    </script>
+  </head>
+
+  <body class="body-login">
+    <div class="container">
+      <div class="container-authen">
+        <form class="form-login">
+          <h2>Inicie Sesión</h2>
+
+          <span> Use su correo y contraseña </span>
+          <a href="Register.html" class="link">
+            ¿No tienes una cuenta? Registrate aquí...
+          </a>
+
+          <div class="container-input">
+            <p>Usuario:</p>
+
+            <input type="text" id="username" maxlength="20" />
+          </div>
+
+          <div class="container-input">
+            <p>Password:</p>
+
+            <input type="password" id="password" maxlength="20" />
+          </div>
+
+          <a href="Recuperar_Contraseña.html" class="link">
+            ¿Olvidaste tu contraseña?
+          </a>
+
+          <button type="button" onclick="login()">Iniciar Sesión</button>
+          <div class="social-networks">
+            <a href="https://instagram.com" id="icon-social">
+              <img src="src/instagram.svg" />
+            </a>
+
+            <a href="https://facebook.com" id="icon-social">
+              <img src="src/facebook.svg" />
+            </a>
+          </div>
+        </form>
+      </div>
+      <div class="container-Welcome">
+        <h1>Bienvenido de nuevo</h1>
+
+        <p>
+          Inicia sesión para acceder a tu perfil y disfrutar de todas las
+          funcionalidades que ofrecemos. ¡Estamos encantados de tenerte con
+          nosotros!
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

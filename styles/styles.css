@@ -94,6 +94,25 @@ body {
 }
 
 
+.btn-perfil {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-image: url('https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Fimg.freepik.com%2Fvector-premium%2Ficono-perfil-avatar-predeterminado-imagen-usuario-redes-sociales-icono-avatar-gris-silueta-perfil-blanco-ilustracion-vectorial_561158-3485.jpg%3Fw%3D2000&sp=1779773099T9cc4e19fcf4564ebc0802554aa37db01cd2f6f859ab0bb8657e1f0d06e40e722');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 2px solid #00aaff;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    padding: 0;
+    margin: 0;
+}
+
+.btn-perfil:hover {
+    transform: scale(1.05);
+}
+
 /* ========== APP CONTAINER ========== */
 .app-container {
     width: 100%;

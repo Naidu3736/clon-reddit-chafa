@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Perfil</title>
+
+    <link rel="stylesheet" href="stylePerfil.css" />
+    <link rel="stylesheet" href="../css/stylecomunidad.css" />
+  </head>
+
+  <body>
+    <!---------------- Barra de navegacion ------------------- -->
+
+    <header class="barradenavegacion">
+      <div class="logo"><br /></div>
+      <div class="busqueda" id="contenedorBusqueda">
+        
+        <span class="iconobusqueda"></span>
+
+        <div class="menudesplegable" id="menuDesplegableBusqueda">
+          <ul class="listaresultados" id="listaResultados"></ul>
+        </div>
+      </div>
+
+      <div class="menu">
+        <span class="iconomenu"></span>
+        <span class="iconocomentarios"></span>
+        <span class="icononotificaciones"></span>
+        <div class="avatarperfil avatarmenu"></div>
+      </div>
+    </header>
+
+    <div class="contenedorperfil">
+      <!---------------- Banner ------------------- -->
+
+      <section class="bannerperfil">
+        <div class="banner"></div>
+
+        <div class="informacionperfil">
+          <div class="avatargrande"></div>
+
+          <div class="datosperfil">
+            <h1>NeoEvangelion</h1>
+
+            <span>@astroboy22</span>
+          </div>
+        </div>
+      </section>
+
+      <!------------------- Menú de perfil -------------------->
+
+      <nav class="menuperfil">
+        <button onclick="mostrarPublicaciones()">Publicaciones</button>
+
+        <button onclick="mostrarComentarios()">Comentarios</button>
+
+        <button onclick="mostrarGuardados()">Guardados</button>
+
+        <button onclick="mostrarLikes()">Likes</button>
+      </nav>
+
+      <!----------------------- Contenido -------------------------->
+
+      <section class="contenidoperfil">
+        <!----------------------- Panel Izquierdo -------------------------->
+
+        <div class="publicaciones" id="contenidoPerfil"></div>
+
+       <!----------------------- Panel Derecho -------------------------->
+
+        <aside class="panelDerecho">
+          <div class="panelInfo">
+            <h3>Biografía</h3>
+
+           <p>
+    Me gusta pasar tiempo escuchando música,
+    jugar videojuegos y aprender cosas nuevas.
+    A veces paso demasiado tiempo despierto,
+    pero al menos siempre encuentro algo interesante
+    que hacer.
+</p>
+          </div>
+
+          <div class="panelInfo">
+            <h3>Actividad</h3>
+            <div class="estadistica">
+              <span class="estInf">24</span>
+
+              <p>Publicaciones</p>
+            </div>
+
+            <div class="estadistica">
+              <span class="estInf">130</span>
+
+              <p>Comentarios</p>
+            </div>
+
+            <div class="estadistica">
+              <span class="estInf">250</span>
+
+              <p>Likes</p>
+            </div>
+            
+          </div>
+          
+
+          <div class="panelInfo">
+            <h3>Comunidades</h3>
+                <span
+                class="tagcomunidad"
+                onclick="cargarComunidad('hacking')">
+
+                x/Hacking
+
+                </span>
+
+                <span
+                class="tagcomunidad"
+                onclick="cargarComunidad('arte_digital')">
+
+                x/Arte Digital
+
+                </span>
+            </div>
+          </div>
+        </aside>
+      </section>
+    </div>
+
+  
+    <script src="perfil.js"></script>
+  </body>
+</html>
