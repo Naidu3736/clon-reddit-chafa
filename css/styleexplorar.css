@@ -1,0 +1,346 @@
+:root{
+    --orbitnavy: #0A1024;
+    --electricblue: #0066FF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:  Arial, sans-serif;
+}
+body {
+    background-color: var(--orbitnavy);
+    color: var(--electricblue);
+}
+
+.barradenavegacion{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    border-bottom: 2px solid var(--electricblue);
+    background-color: var(--orbitnavy);
+    color: white;
+}
+
+.busqueda {
+    display: flex;
+    align-items: center;
+    background-color: var(--electricblue);
+    padding: 10px 20px;
+    border-radius: 20px;
+    width: 50%;
+    position: relative;
+}
+
+.busqueda input {
+    border: none;
+    background: transparent;
+    outline: none;
+    width: 100%;
+    color: var(--orbitnavy);
+    font-weight: 500;
+}
+
+.busqueda input::placeholder {
+    color: white;
+    opacity: 0.7;
+    font-weight: BOLD;
+}
+
+.menudesplegable {
+    display: none;
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    width: 100%;
+    background-color: var(--electricblue);
+    border: 1px solid var(--orbitnavy);
+    border-radius: 15px;
+    padding: 10px;
+    z-index: 10;
+}
+
+.menudesplegable.activo {
+    display: block;
+}
+
+.listaresultados {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.listaresultados li {
+    color: white;
+    padding: 8px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.listaresultados li:hover {
+    background-color: var(--orbitnavy);
+}
+.logo{
+    text-align: center;
+    font-weight: bold;
+    width: 120px;
+    height: 50px;
+
+    background-image: url("../images/logo.gif");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.logo a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.iconobusqueda {
+    display: inline-block;
+    width: 26px;
+    height: 24px;
+
+    background-image: url("../images/lupa.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.iconomenu {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+
+    background-image: url("../images/menu.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: invert(1);
+}
+.iconocomentarios {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+
+    background-image: url("../images/comentarios.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: invert(1);
+}
+.icononotificaciones {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+
+    background-image: url("../images/notificacion.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: invert(1);
+}
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 20px;
+}
+.avatarperfil{
+   background-image: url("../images/Ryoicon.jpg");
+    background-size: cover; 
+    border-radius: 50%;  
+}
+.avatarmenu {
+    width: 30px;
+    height: 30px;
+}
+
+.contenedorcomunidades {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+.titulopagina {
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+.disenoexplorarcomunidades {
+    display: grid;
+    grid-template-columns: 1fr 2.5fr;
+    gap: 40px;
+}
+
+.ladoizquierdo {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.comunidadesizquierda {
+    background-color: var(--electricblue);
+    border-radius: 20px;
+    padding: 20px;
+}
+.divisioninterna {
+     background-color:var(--orbitnavy);
+    border-radius: 15px;
+    padding: 20px;
+    min-height: 250px; 
+}
+
+.titulocomunidades {
+    text-align: center;
+   font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.separacionesdecomunidades {
+   border: none;
+    border-top: 2px solid var(--electricblue);
+     margin: 15px 0;    
+    margin-bottom: 15px;
+}
+.intereses {
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+}
+.intereses:hover span{
+    opacity: 0.8;
+}
+.ladoizquierdo2 {
+   background-color: var(--electricblue);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.ladoderecho {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.categorias {
+    display: flex;
+    gap: 15px;
+}
+
+
+.botoncategoria {
+    background-color: var(--electricblue);
+    color: var(--orbitnavy);
+    border: none;
+    padding: 8px 26px;
+    border-radius: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+}
+.botoncategoria:hover {
+    opacity: 0.8;
+}
+
+.listacomunidades {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.listadecomunidades {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.comunidad1 {
+    background-image: url("../image/bannerhacking.gif");
+    background-size: cover;
+    border-radius: 15px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+.comunidad1 h2 {
+    font-size: 18px;
+    font-weight: bold;
+}
+.comunidad1:hover {
+    opacity: 0.8;
+}
+.comunidad2 {
+    background-image: url("../image/bannerarte.gif");
+    background-size: cover;
+    border-radius: 15px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+.comunidad2 h2 {
+    font-size: 18px;
+    font-weight: bold;
+}
+.comunidad2:hover {
+    opacity: 0.8;
+}
+.comunidad3 {
+    background-image: url("../image/banneralgo.gif");
+    background-size: cover;
+    border-radius: 15px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+.comunidad3 h2 {
+    font-size: 18px;
+    font-weight: bold;
+}
+.comunidad3:hover {
+    opacity: 0.8;
+}
+.comunidad4 {
+    background-image: url("../image/bannermineria.gif");
+    background-size: cover;
+    border-radius: 15px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+.comunidad4 h2 {
+    font-size: 18px;
+    font-weight: bold;
+}
+.comunidad4:hover {
+    opacity: 0.8;
+}
+
+.vermas {
+   background-color: var(--electricblue);
+    color: var(--orbitnavy);
+    border: none;
+    padding: 8px 16px;
+    border-radius: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+}
+.vermas:hover {
+    opacity: 0.8;
+}
+
+

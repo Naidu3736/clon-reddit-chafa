@@ -1,0 +1,523 @@
+:root{
+    --orbitnavy: #0A1024;
+    --electricblue: #0066FF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:  Arial, sans-serif;
+}
+
+body {
+    background-color: var(--orbitnavy);
+    color: var(--electricblue);
+}
+
+
+.barradenavegacion{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    border-bottom: 2px solid var(--electricblue);
+    background-color: var(--orbitnavy);
+    color: white;
+    position: relative; 
+    z-index: 9999;
+}
+
+.busqueda {
+    display: flex;
+    align-items: center;
+    background-color: var(--electricblue);
+    padding: 10px 20px;
+    border-radius: 20px;
+    width: 50%;
+    position: relative;
+}
+
+.busqueda input {
+    border: none;
+    background: transparent;
+    outline: none;
+    width: 100%;
+    color: var(--orbitnavy);
+    font-weight: 500;
+}
+
+.busqueda input::placeholder {
+    color: white;
+    opacity: 0.7;
+    font-weight: BOLD;
+}
+
+.menudesplegable {
+    display: none;
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    width: 100%;
+    background-color: var(--electricblue);
+    border: 1px solid var(--orbitnavy);
+    border-radius: 15px;
+    padding: 10px;
+    z-index: 10;
+}
+
+.menudesplegable.activo {
+    display: block;
+}
+
+.listaresultados {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.listaresultados li {
+    color: white;
+    padding: 8px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.listaresultados li:hover {
+    background-color: var(--orbitnavy);
+}
+.logo{
+    text-align: center;
+    font-weight: bold;
+    width: 120px;
+    height: 50px;
+
+    background-image: url("../images/logo.gif");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.logo a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.iconobusqueda {
+    display: inline-block;
+    width: 26px;
+    height: 24px;
+
+    background-image: url("../images/lupa.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.iconomenu {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+
+    background-image: url("../images/menu.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: invert(1);
+}
+.iconocomentarios {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+
+    background-image: url("../images/comentarios.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: invert(1);
+}
+.icononotificaciones {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+
+    background-image: url("../images/notificacion.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: invert(1);
+}
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 20px;
+}
+.avatarperfil{
+   background-image: url("../images/Ryoicon.jpg");
+    background-size: cover; 
+    border-radius: 50%;  
+}
+.avatarmenu {
+    width: 30px;
+    height: 30px;
+}
+
+.contenedorbanner{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;  
+}
+
+.portada{
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.fondodeportada{
+    width: 1300px;
+    height: 170px;
+
+    border-radius: 20px;
+
+    background-image: url("../images/Banner.gif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+}
+
+.cabeceradecomunidad{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    bottom: -40px;
+    left: 20px;
+    gap: 15px;
+}
+.botonunirse {
+    background-color: var(--electricblue);
+    color: var(--orbitnavy);
+    border: none;
+    padding: 8px 16px;
+    border-radius: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+}
+.botonunirse:hover {
+    opacity: 0.8;
+}
+.avatarprincipal{
+    width: 150px;
+    height: 150px;
+
+    border: 4px solid var(--electricblue);
+    border-radius: 50%;
+
+    background-image: url("../images/LogoComunidad.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    background-color: var(--orbitnavy);
+}
+
+.tituloprincipal{
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: var(--electricblue);
+     color: white;
+}
+
+.cabeceraizquierda {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.cabeceraizquierda h3 {
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+}
+
+.botoncrearpost {
+    background-color: var(--electricblue);
+    color: var(--orbitnavy);
+    border: none;
+    padding: 8px 16px;
+    border-radius: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+}
+.botoncrearpost:hover {
+    opacity: 0.8;
+}
+.contenidocentral{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+}
+
+.lineadeseparacion{
+    border-top: 2px solid var(--electricblue);
+    margin: 40px 0;
+}
+
+.publicacionenmuro{
+    background-color: var(--electricblue);
+    color: var(--orbitnavy);
+    border-radius: 20px;
+    padding: 20px;
+}
+.publicacionenmuro:hover {
+    opacity: 0.8;
+}
+.publicacionenmuro2{
+    background-color: var(--electricblue);
+    color: var(--orbitnavy);
+    border-radius: 20px;
+    padding: 20px;
+}
+.publicacionenmuro2:hover {
+    opacity: 0.8;
+}
+
+.publicacionenmuro3{
+    background-color: var(--electricblue);
+    color: var(--orbitnavy);
+    border-radius: 20px;
+    padding: 20px;
+}
+.publicacionenmuro3:hover {
+    opacity: 0.8;
+}
+.avatarminiatura {
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    border-radius: 50%;
+    background-color: var(--orbitnavy);
+    border: 2px solid var(--electricblue);
+    background-image: url("../images/Ryoicon.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.avatarminiatura2 {
+  width: 35px;
+    height: 35px;
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    border-radius: 50%;
+    background-color: var(--orbitnavy);
+    border: 2px solid var(--electricblue);
+    background-image: url("../images/avatar2.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;  
+}
+.avatarminiatura3 {
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    border-radius: 50%;
+    background-color: var(--orbitnavy);
+    border: 2px solid var(--electricblue);
+    background-image: url("../images/avatar3.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+
+.encabezadopublicacion{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    font-size: 12px;
+    font-weight: bold;
+}
+.encabezadopublicacion .avatarminiatura {
+   position: static;
+}
+.encabezadopublicacion2{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    font-size: 12px;
+    font-weight: bold;
+}
+.encabezadopublicacion2 .avatarminiatura2 {
+   position: static;
+}
+.encabezadopublicacion3{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    font-size: 12px;
+    font-weight: bold;
+}
+.encabezadopublicacion3 .avatarminiatura3 {
+   position: static;
+}
+
+
+.titulopublicacion{
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 10px;
+}
+.titulopublicacion2{
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 10px;
+}
+.titulopublicacion3{
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.contenidopublicacion{
+    background-color: var(--orbitnavy);
+    color: var(--electricblue);
+    border-radius: 15px;
+    height: 350px;
+    padding: 15px;
+    font-size: 12px;
+
+    background-image: url("../images/imagenpublicacion.jpg") ;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.contenidopublicacion2{
+    background-color: var(--orbitnavy);
+    color: var(--electricblue);
+    border-radius: 15px;
+    height: 350px;
+    padding: 15px;
+    font-size: 12px;
+
+    background-image: url("../images/postp2.jpg") ;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.contenidopublicacion3{
+    background-color: var(--orbitnavy);
+    color: var(--electricblue);
+    border-radius: 15px;
+    height: 350px;
+    padding: 15px;
+    font-size: 12px;
+
+    background-image: url("../images/postp3.jpg") ;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.ladoderecho{ 
+    background-color: var(--electricblue);
+    border-radius: 20px;
+    padding: 20px;
+    height: fit-content;
+}
+
+.informacioncomunidad {
+  background-color: var(--orbitnavy);
+    color: var(--electricblue);
+    text-align: center;
+    font-weight: bold;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.tituloinformacion {
+    text-align: center;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.estadisticas p {
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: left;
+    color: white;
+}
+
+.publicacionesdestacadas{
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.tarjetadestacada1 {
+    background-image: url("../images/post1.gif");
+    background-size: cover;
+    opacity: 0.8;
+    flex: 1;
+    border-radius: 20px;
+    height: 250px;
+    padding: 15px;
+    position: relative;
+}
+.tarjetadestacada1:hover {
+    opacity: 0.5;
+}
+.tarjetadestacada2 {
+    background-image: url("../images/post2.gif");
+    background-size: cover;
+    opacity: 0.8;
+    flex: 1;
+    border-radius: 20px;
+    height: 250px;
+    padding: 15px;
+    position: relative;
+}
+.tarjetadestacada2:hover {
+    opacity: 0.5;
+}
+.tarjetadestacada3 {
+    background-image: url("../images/post3.gif");
+    background-size: cover;
+    opacity: 0.8;
+    flex: 1;
+    border-radius: 20px;
+    height: 250px;
+    padding: 15px;
+    position: relative;
+}
+.tarjetadestacada3:hover {
+    opacity: 0.5;
+}
+.publicacionesdestacadas h4 {
+    text-align: center;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+}
+
